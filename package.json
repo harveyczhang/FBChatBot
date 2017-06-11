@@ -1,0 +1,27 @@
+{
+  "name": "fbchatbot",
+  "version": "1.0.0",
+  "description": "a generic open-domain chatbot on FB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harveyczhang/FBChatBot.git"
+  },
+  "keywords": [
+    "chatbot"
+  ],
+  "author": "HZ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harveyczhang/FBChatBot/issues"
+  },
+  "homepage": "https://github.com/harveyczhang/FBChatBot#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "request": "^2.81.0"
+  }
+}
