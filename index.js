@@ -30,7 +30,7 @@ app.use(bodyParser.json())
 
 //ROUTES
 app.get('/', function(request, response) {
-	res.send("Hi, I am a FB chatbot")
+	response.send("Hi, I am a FB chatbot")
 })
 
 //This is a webhook for Facebook
