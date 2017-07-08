@@ -6,6 +6,9 @@
  * Based on related tutorial by blodiebytes:
  * https://www.youtube.com/watch?v=bUwiKFTvmDQ
  * 
+ * Code lives at:
+ * https://obscure-ravine-46844.herokuapp.com/ | https://git.heroku.com/obscure-ravine-46844.git
+ *
  */
 
 'use strict'	//follow strict syntax 
@@ -38,6 +41,6 @@ app.get('/webhook/', function(request, response) {
 	response.send("Sorry, Wrong Token")
 })
 
-app.listen(app.get('port'), function()) {
+app.listen(app.get('port'), function() {
 	console.log("running: port " + app.get('port'))
-}
+})
