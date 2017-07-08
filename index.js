@@ -41,10 +41,10 @@ app.get('/webhook/', function(request, response) {
 	response.send("Sorry, Wrong Token")
 })
 
-token = EAAGvMop1ZBwcBALfDHKu6QzCZAMZBnShO7pDnXB9CPYv83OrysDZBjnX06zbp5FPkL6BmTeX6dxwQ4W10ctlRh5suiEBrVpnRPFhWX0XsbpFcFQZBsUew0jtyPhodQClu23oMP5sFb4nnGCNnu4talsbkakUVYgTRXDvrZAIpDXgZDZD
+let token = "EAAGvMop1ZBwcBALfDHKu6QzCZAMZBnShO7pDnXB9CPYv83OrysDZBjnX06zbp5FPkL6BmTeX6dxwQ4W10ctlRh5suiEBrVpnRPFhWX0XsbpFcFQZBsUew0jtyPhodQClu23oMP5sFb4nnGCNnu4talsbkakUVYgTRXDvrZAIpDXgZDZD"
 
 app.post('/webhook/', function(request, response) {
-	let messaging_events = request.body.entry[0].messaging_events
+	let messaging_events = request.body.entry[0].messaging
 	for (let i = 0; i < messaging_events.length; i++) {
 		let event = messaging_events[i]
 		let sender = event.sender.id
@@ -63,7 +63,7 @@ function sendText(sender, text) {
 		qs: {access_token: token}
 		method: "POST"
 		json: {
-			receipt: {id, sender}
+			receipent: {id, sender}
 			message: messageData
 		}
 	}, function(error, response, body) {
