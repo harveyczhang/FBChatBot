@@ -1,3 +1,13 @@
+/*
+ * Author: Harvey Zhang
+ * Email: harvey.zhang @ mail.utoronto.ca
+ *
+ * Facebook Chatbot framework hosted on Heroku
+ * Based on related tutorial by blodiebytes:
+ * https://www.youtube.com/watch?v=bUwiKFTvmDQ
+ * 
+ */
+
 'use strict'	//follow strict syntax 
 
 //list the dependencies that we require
@@ -11,6 +21,7 @@ const app = express()
 //set the port, use the best port or 5000
 app.set('port', (process.env.PORT || 5000))
 
+//set the parser for the application
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
 
@@ -26,3 +37,7 @@ app.get('/webhook/', function(request, response) {
 	}
 	response.send("Sorry, Wrong Token")
 })
+
+app.listen(app.get('port'), function()) {
+	console.log("running: port " + app.get('port'))
+}
